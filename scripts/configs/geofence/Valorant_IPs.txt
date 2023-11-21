@@ -1,0 +1,47 @@
+# NA - US West (Oregon)
+
+# NA - US West (North California)
+
+# NA - US East (North Virginia)
+
+# NA - US Central (Texas)
+
+# NA - US Central (Illinois)
+
+# NA - US Central (Georgia)
+
+# LATAM - Santiago
+
+# LATAM - Mexico City
+
+# LATAM - Miami
+
+# BR - Brazil (Sao Paulo)
+
+# EU - Frankfurt
+
+# EU - Paris
+
+# EU - Stockholm
+
+# EU - Istanbul
+
+# EU - London
+
+# EU - Warsaw
+
+# EU - Madrid
+
+# EU - Bahrain
+
+# KR - Seoul
+
+# AP - Hong Kong
+
+# AP - Tokyo
+
+# AP - Singapore
+
+# AP - Sydney
+
+# AP - Mumbai
