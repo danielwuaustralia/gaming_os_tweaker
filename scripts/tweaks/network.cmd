@@ -43,23 +43,14 @@ powershell Disable-NetAdapterIPsecOffload -Name "*" -ErrorAction SilentlyContinu
 powershell Disable-NetAdapterPowerManagement -Name "*" -ErrorAction SilentlyContinue
 powershell Disable-NetAdapterQos -Name "*" -ErrorAction SilentlyContinue
 powershell Disable-NetAdapterUso -Name "*" -ErrorAction SilentlyContinue
+:: PacketDirect extends NDIS with an accelerated I/O model, which can increase the number of packets processed per second by an order of magnitude and significantly decrease jitter when compared to the traditional NDIS I/O path.
 powershell Enable-NetAdapterPacketDirect -Name "*" -ErrorAction SilentlyContinue
 
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_lldp -ErrorAction SilentlyContinue
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_lltdio -ErrorAction SilentlyContinue
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_msclient -ErrorAction SilentlyContinue
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_rspndr -ErrorAction SilentlyContinue
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_server -ErrorAction SilentlyContinue
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_implat -ErrorAction SilentlyContinue
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_pacer -ErrorAction SilentlyContinue
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_pppoe -ErrorAction SilentlyContinue
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_rdma_ndk -ErrorAction SilentlyContinue
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_ndisuio -ErrorAction SilentlyContinue
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_wfplwf_upper -ErrorAction SilentlyContinue
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_wfplwf_lower -ErrorAction SilentlyContinue
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_netbt -ErrorAction SilentlyContinue
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_netbios -ErrorAction SilentlyContinue
-powershell Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip6 -ErrorAction SilentlyContinue
+:: If you get any issues, check with the command "Get-NetAdapterBinding -Name '*' -AllBindings -IncludeHidden", you can easily enable any of the components with "Enable-NetAdapterBinding". 
+:: I noticed that the internet status were not working after disableing everything except ipv4, but there were still internet connection even after a restart.
+powershell "Get-NetAdapterBinding -Name '*' -AllBindings -IncludeHidden | Where-Object { $_.ComponentID -ne 'ms_tcpip' -and $_.Enabled -eq 'True' } | ForEach { Disable-NetAdapterBinding -Name '*' -ComponentID $_.ComponentID -AllBindings -IncludeHidden -ErrorAction SilentlyContinue }"
+
+:: IPV6 Note: By default ipv6 are disabled, if you use it, make sure to change the script yourself, there are more than one place that would require changing.
 
 :: ===================================================================================================================================================================================
 
