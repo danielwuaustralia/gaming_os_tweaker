@@ -1,5 +1,8 @@
 # Gaming OS Tweaker
 
+> [!WARNING]  
+> I dont plan on continue maintaining the project, I might only unarchive if there is something meaningful to be added/changed, I am also no longer accepting PRs nor looking for anything. I put it back in a org because more people contacted me about the project through email.
+
 > Attempts to debloat, keep low input lag, low latency, better hitreg and improved performance.
 
 ```txt
