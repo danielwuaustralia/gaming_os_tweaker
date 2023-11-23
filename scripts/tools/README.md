@@ -14,3 +14,5 @@
   - If `nvcplui.exe` get a block message, it means you might have a ownership problem. I added a file inside called `ownership_fix.ps1` that should help with the problem.
 
 - Low Audio Latency - <https://github.com/spddl/LowAudioLatency/releases>
+
+- Mouse Debouncer (double click fix) - <https://github.com/mydarknight/Mouse-Debouncer> - If you want to get it yourself, go to Actions tab > Choose the latest build > Open, Download the artifact and unzip.
