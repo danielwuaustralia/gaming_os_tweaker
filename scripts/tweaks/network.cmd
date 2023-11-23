@@ -48,7 +48,7 @@ powershell Enable-NetAdapterPacketDirect -Name "*" -ErrorAction SilentlyContinue
 
 :: If you get any issues, check with the command "Get-NetAdapterBinding -Name '*' -AllBindings -IncludeHidden", you can easily enable any of the components with "Enable-NetAdapterBinding".
 :: I noticed that the internet status were not working after disabling everything except IPV4, but there were still internet connection even after a restart.
-powershell "Get-NetAdapterBinding -Name '*' -AllBindings -IncludeHidden | Where-Object { $_.ComponentID -ne 'ms_tcpip' -and $_.Enabled -eq 'True' } | ForEach { Disable-NetAdapterBinding -Name '*' -ComponentID $_.ComponentID -AllBindings -IncludeHidden -ErrorAction SilentlyContinue }"
+powershell "Get-NetAdapterBinding -Name '*' -AllBindings -IncludeHidden | Where-Object { $_.ComponentID -notin @('ms_tcpip', 'ms_ndisuio') -and $_.Enabled -eq 'True' } | ForEach { Disable-NetAdapterBinding -Name '*' -ComponentID $_.ComponentID -AllBindings -IncludeHidden -ErrorAction SilentlyContinue }"
 
 :: IPV6 Note: By default ipv6 are disabled, if you use it, make sure to change the script yourself, there are more than one place that would require changing.
 
