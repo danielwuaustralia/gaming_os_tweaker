@@ -70,21 +70,21 @@ From a fresh Windows 10 22H2 install and completely updated, and applying the sc
 
 No additional tools were used.
 
-It's a very clean OS, while being decently functional. Task Scheduler and UAC (minimum) are kept enabled, I enabled the installation of `simplewall` which is better than Windows Firewall if you execute the `install_apps.cmd` script. Windows Update are disabled due to not being able to complete installation.
+It's a very clean OS, while being decently functional. Task Scheduler and UAC (minimum) are kept enabled. Windows Update are disabled due to not being able to complete installation.
 
-In my 5800X3D, the average DPC Latency are at `0.7`. Maybe with a high-end Intel that would be even less. Though latest nvidia drivers are having high dpc issues, and they have recognized and are working on it, when they fix, maybe even with Ryzen will be less in the average. With the CPU idle state disabled, it was able to go to `0.5`, but the average fps in Overwatch 2 for example were less than when enabled.
+In my 5800X3D, the average DPC Latency are at `0.7` (Win10). It's probably less on Intel. With the CPU idle state disabled, it was able to be on `0.5` average. But the average fps in Overwatch 2 for example were less than when enabled.
 
 Good reference: <https://docs.google.com/document/d/1ILugrwtHfmisYzI1MdCOhSzBPuLJPi5D7xYJgQ4sxDM/edit#heading=h.mjyvqzxoctd0>
 
-To give some perspective on the FPS, before I was on Win11 only with some tweaks and debloat changes. I had to use the nvidia driver optimized for Overwatch 2 to be able to keep consistent 420fps at 1440p with pretty much no dips, but were not possible with other driver versions. Now in Win10 with the scripts from this repo, it never goes below 500fps, stays on 600fps when there is no fights and 540fps~ in mid fights most of the time, and I am using the latest driver from nvidia, not the optimized for [Overwatch 2](/docs/overwatch2_fps.png).
+To give some perspective on the FPS, previously I was on Win11 only with some tweaks and debloat changes. I had to use the nvidia driver optimized for Overwatch 2 to be able to keep consistent 420fps at 1440p with pretty much no dips, but were not possible with other driver versions. Now in Win10 with the scripts from this repo, it never goes below 500fps, stays on 600fps when there is no fights and 540fps~ in mid fights most of the time, and I am using the latest driver from nvidia, not the optimized for [Overwatch 2](/docs/overwatch2_fps.png).
 
-(Update on Windows 11 23H2) I have now finished most fixes/tweaks for this OS, result was good, pretty much same avg fps on games, DPC avg went from 0.76 to 0.81 though, a small increase in comparison to Win10. But this is mostly paying attention in games that I played, not based on benchmarks. If someone wants to do benchmarks and create a PR, they are welcome, I dont have time for it. <https://www.capframex.com/>
+(Update on Windows 11 23H2) I have now finished most fixes/tweaks for this OS, result was good, It's now able to reach pretty much same avg fps on games, dpc avg are consistent on `0.77`. On the fps side, this was mostly paying attention to games that I played, not based on benchmarks. If anyone want, they can measure / benchmark it themselves. <https://www.capframex.com/>
 
-It's not a bad DPC avg for Ryzen CPU, while not having Processor Idle disabled. Should be even better on Intel.
+It's not a bad DPC avg for Ryzen CPU, while not having Processor Idle disabled.
 
 ![processes](./docs/processes.png)
 
-For the first time, I reached very low DPC count, this is a 1min run, where before, counts were always much higher (excluding LatencyMon), even with same avg latency or a bit less. It was run on Win11 23H2. Scripts and Docs were updated, much better results including most of it.
+For the first time, I reached very low DPC count, this is a 1min run, where before, counts were always much higher (excluding LatencyMon), even with same avg latency or a bit less. It was run on Win11 23H2. Scripts and Docs were updated.
 
 ![latencymon_drivers](./docs/latencymon_drivers.png)
 
@@ -132,7 +132,7 @@ It doesnt mean they arent trustworthy, I don't know them, it just means it's not
 - BattleEye (Escape from Tarkov, Destiny 2) - Working
 - Punkbuster (BF4) - Working
 - Vanguard (Valorant) - Working **(But, only if you apply the `anticheat_fix.cmd` from `scripts/optional_helpers/` folder, to enable the exploit mitigations.)**
-- FaceIT (CSGO) - Not Tested **(Might be similar to Vanguard in terms of requirements. I dont play the game to know.)**
+- FaceIT (CS2) - Not Tested **(Might be similar to Vanguard in terms of requirements. I dont play the game to know.)**
 
 > I didnt have the opportunity to test every game, but most without Anti-Cheats should be working, except maybe VR/Mixed Reality. If anyone find any issue, feel free to create an issue and/or PR.
 
