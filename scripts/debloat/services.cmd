@@ -175,6 +175,9 @@ REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\seclogon" /v Start
 :: REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\amdppm" /v Start /t REG_DWORD /d 4 /f
 :: REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Processor" /v Start /t REG_DWORD /d 4 /f
 
+:: If you have intel and usb stop working, could be related to this service
+REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\intelpep" /v Start /t REG_DWORD /d 4 /f
+
 REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\RasMan" /v Start /t REG_DWORD /d 4 /f
 REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\lmhosts" /v Start /t REG_DWORD /d 4 /f
 REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\p2pimsvc" /v Start /t REG_DWORD /d 4 /f
@@ -459,7 +462,6 @@ REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UserManager" /v St
 REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Wcmsvc" /v Start /t REG_DWORD /d 4 /f
 REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Winmgmt" /v Start /t REG_DWORD /d 2 /f
 REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\cdrom" /v Start /t REG_DWORD /d 4 /f
-REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\intelpep" /v Start /t REG_DWORD /d 4 /f
 REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netman" /v Start /t REG_DWORD /d 3 /f
 REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetSetupSvc" /v Start /t REG_DWORD /d 3 /f
 REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0" /v Start /t REG_DWORD /d 4 /f
