@@ -11,6 +11,12 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
+        <SettingNameInfo> </SettingNameInfo>
+        <SettingID>390467</SettingID>
+        <SettingValue>1</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
         <SettingNameInfo />
         <SettingID>523190</SettingID>
         <SettingValue>1</SettingValue>
@@ -163,7 +169,7 @@
       <ProfileSetting>
         <SettingNameInfo />
         <SettingID>14366803</SettingID>
-        <SettingValue>3</SettingValue>
+        <SettingValue>2</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -188,6 +194,12 @@
         <SettingNameInfo>Virtual Reality pre-rendered frames</SettingNameInfo>
         <SettingID>269553971</SettingID>
         <SettingValue>1</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo />
+        <SettingID>269779253</SettingID>
+        <SettingValue>3</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -233,6 +245,12 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
+        <SettingNameInfo />
+        <SettingID>273825216</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
         <SettingNameInfo>Power management mode</SettingNameInfo>
         <SettingID>274197361</SettingID>
         <SettingValue>3</SettingValue>
@@ -272,6 +290,18 @@
         <SettingNameInfo>Antialiasing - Mode</SettingNameInfo>
         <SettingID>276757595</SettingID>
         <SettingValue>1</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Frame Rate Limiter 2 Control</SettingNameInfo>
+        <SettingID>277041151</SettingID>
+        <SettingValue>64</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>FRL Low Latency</SettingNameInfo>
+        <SettingID>277041152</SettingID>
+        <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -338,6 +368,12 @@
         <SettingNameInfo>Antialiasing - Setting</SettingNameInfo>
         <SettingID>282555346</SettingID>
         <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>CUDA Sysmem Fallback Policy</SettingNameInfo>
+        <SettingID>283962569</SettingID>
+        <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -410,6 +446,12 @@
         <SettingNameInfo>Enable overlay</SettingNameInfo>
         <SettingID>543959236</SettingID>
         <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>High level control of the rendering quality on OpenGL</SettingNameInfo>
+        <SettingID>544832876</SettingID>
+        <SettingValue>10</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -503,6 +545,12 @@
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
+        <SettingNameInfo>Vulkan/OpenGL present method</SettingNameInfo>
+        <SettingID>550932728</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
         <SettingNameInfo />
         <SettingID>552075951</SettingID>
         <SettingValue>1</SettingValue>
@@ -544,6 +592,88 @@
         <SettingNameInfo>Power management mode</SettingNameInfo>
         <SettingID>274197361</SettingID>
         <SettingValue>1</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+    </Settings>
+  </Profile>
+  <Profile>
+    <ProfileName>Microsoft Shell Experience Host</ProfileName>
+    <Executeables>
+      <string>shellexperiencehost_cw5n1h2txyewy</string>
+      <string>shellexperiencehost.exe</string>
+      <string>microsoft.windows.shellexperiencehost_cw5n1h2txyewy</string>
+    </Executeables>
+    <Settings>
+      <ProfileSetting>
+        <SettingNameInfo>Power management mode</SettingNameInfo>
+        <SettingID>274197361</SettingID>
+        <SettingValue>3</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+    </Settings>
+  </Profile>
+  <Profile>
+    <ProfileName>Overwatch 2</ProfileName>
+    <Executeables>
+      <string>overwatch launcher.exe</string>
+      <string>overwatch.exe</string>
+    </Executeables>
+    <Settings>
+      <ProfileSetting>
+        <SettingNameInfo>Sharpening Value</SettingNameInfo>
+        <SettingID>3070157</SettingID>
+        <SettingValue>50</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Sharpening - Denoising Factor</SettingNameInfo>
+        <SettingID>3070158</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Sharpening Filter</SettingNameInfo>
+        <SettingID>5867816</SettingID>
+        <SettingValue>1</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>NVIDIA Predefined Sharpen Usage</SettingNameInfo>
+        <SettingID>5867849</SettingID>
+        <SettingValue>15</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+    </Settings>
+  </Profile>
+  <Profile>
+    <ProfileName>Steam Web Helper Service</ProfileName>
+    <Executeables />
+    <Settings />
+  </Profile>
+  <Profile>
+    <ProfileName>Valve Steam WebHelper</ProfileName>
+    <Executeables>
+      <string>steamwebhelper.exe</string>
+    </Executeables>
+    <Settings>
+      <ProfileSetting>
+        <SettingNameInfo>Enable FXAA</SettingNameInfo>
+        <SettingID>276089202</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+    </Settings>
+  </Profile>
+  <Profile>
+    <ProfileName>Windows Explorer</ProfileName>
+    <Executeables>
+      <string>explorer.exe</string>
+    </Executeables>
+    <Settings>
+      <ProfileSetting>
+        <SettingNameInfo>Power management mode</SettingNameInfo>
+        <SettingID>274197361</SettingID>
+        <SettingValue>3</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
     </Settings>

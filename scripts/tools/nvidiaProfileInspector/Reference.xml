@@ -2082,14 +2082,14 @@
       <UserfriendlyName>MAX_PENDING_CMD_BUFFERS</UserfriendlyName>
       <HexSettingID>0x00C63A79</HexSettingID>
       <Description />
-      <GroupName>8 - Extra</GroupName>
+      <GroupName>0 - [/]</GroupName>
       <SettingValues>
         <CustomSettingValue>
           <UserfriendlyName>Off - Limit max number of pending command buffers (per context) in software queue. If key is set zero it will be ignored</UserfriendlyName>
           <HexValue>0x00000000</HexValue>
         </CustomSettingValue>
         <CustomSettingValue>
-          <UserfriendlyName>1</UserfriendlyName>
+          <UserfriendlyName>1 (RECOMMENDED)</UserfriendlyName>
           <HexValue>0x00000001</HexValue>
         </CustomSettingValue>
         <CustomSettingValue>
@@ -2103,19 +2103,23 @@
       <UserfriendlyName>SYSMEMCACHEDCOPYBEHAVIOR</UserfriendlyName>
       <HexSettingID>0x00DB3853</HexSettingID>
       <Description />
-      <GroupName>8 - Extra</GroupName>
+      <GroupName>0 - [/]</GroupName>
       <SettingValues>
         <CustomSettingValue>
           <UserfriendlyName>Disallow - Disable sysmem caching for textures</UserfriendlyName>
           <HexValue>0x00000000</HexValue>
         </CustomSettingValue>
         <CustomSettingValue>
-          <UserfriendlyName>ALLOW_FOR_TEXTURES_WITHOUT_SUBRESOURCES - Allow for textures without subresources only (default)</UserfriendlyName>
+          <UserfriendlyName>ALLOW_FOR_TEXTURES_WITHOUT_SUBRESOURCES</UserfriendlyName>
           <HexValue>0x00000001</HexValue>
         </CustomSettingValue>
         <CustomSettingValue>
-          <UserfriendlyName>ALLOW_FOR_TEXTURES_WITH_SUBRESOURCES - Allow for textures with mips</UserfriendlyName>
+          <UserfriendlyName>ALLOW_FOR_TEXTURES_WITH_SUBRESOURCES (RECOMMENDED)</UserfriendlyName>
           <HexValue>0x00000002</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>Experimental (NOT RECOMMENDED)</UserfriendlyName>
+          <HexValue>0x00000003</HexValue>
         </CustomSettingValue>
       </SettingValues>
       <SettingMasks />
@@ -2137,7 +2141,7 @@
       <UserfriendlyName>MCFORCEHOSTSTAGINGBUFFERSIZE</UserfriendlyName>
       <HexSettingID>0x00DB3858</HexSettingID>
       <Description />
-      <GroupName>8 - Extra</GroupName>
+      <GroupName>0 - [/]</GroupName>
       <SettingValues>
         <CustomSettingValue>
           <UserfriendlyName>Default - size of host staging buffer, mostly for early push</UserfriendlyName>
@@ -4967,6 +4971,160 @@
         <CustomSettingValue>
           <UserfriendlyName>TEST - (Test mode) shows shader types in different colors</UserfriendlyName>
           <HexValue>0x0000000F</HexValue>
+        </CustomSettingValue>
+      </SettingValues>
+      <SettingMasks />
+    </CustomSetting>
+    <CustomSetting>
+      <UserfriendlyName>TILED_CACHE</UserfriendlyName>
+      <HexSettingID>0x10523DC0</HexSettingID>
+      <Description />
+      <GroupName>0 - [/]</GroupName>
+      <OverrideDefault>0x00000001</OverrideDefault>
+      <SettingValues>
+        <CustomSettingValue>
+          <UserfriendlyName>On (DEFAULT)</UserfriendlyName>
+          <HexValue>0x00000001</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>Off [RECOMMENDED (Possibly Better Frame Pacing)]</UserfriendlyName>
+          <HexValue>0x00000000</HexValue>
+        </CustomSettingValue>
+      </SettingValues>
+      <SettingMasks />
+    </CustomSetting>
+    <CustomSetting>
+      <UserfriendlyName>Frame Rate Limiter Mode</UserfriendlyName>
+      <HexSettingID>0x10834FFF</HexSettingID>
+      <MinRequiredDriverVersion>372.00</MinRequiredDriverVersion>
+      <GroupName>2 - Sync and Refresh</GroupName>
+      <SettingValues>
+        <CustomSettingValue>
+          <UserfriendlyName>Default (RECOMMENDED)</UserfriendlyName>
+          <HexValue>0x00000000</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>Limiter V2 - Allow All (NOT RECOMMENDED)</UserfriendlyName>
+          <HexValue>0x00000020</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>Limiter V2 - Force Off [Enables Limiter V1 (Possibly Less Input Lag)]</UserfriendlyName>
+          <HexValue>0x00000040</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>Limiter V2 - Flip By Flip Metering (NOT RECOMMENDED)</UserfriendlyName>
+          <HexValue>0x00000004</HexValue>
+        </CustomSettingValue>
+      </SettingValues>
+      <SettingMasks />
+    </CustomSetting>
+    <CustomSetting>
+      <UserfriendlyName>WksCursor</UserfriendlyName>
+      <HexSettingID>0x11e21666</HexSettingID>
+      <MinRequiredDriverVersion>372.00</MinRequiredDriverVersion>
+      <GroupName>0 - [/]</GroupName>
+      <SettingValues>
+        <CustomSettingValue>
+          <UserfriendlyName>REDRAW_RENDER_BEFORE_FLIP | SOC_EMULATED_CURSOR</UserfriendlyName>
+          <HexValue>0x00000023</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>CURSOR_TYPE_MASK</UserfriendlyName>
+          <HexValue>0x0000000F</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>SW_CURSOR</UserfriendlyName>
+          <HexValue>0x00000001</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>CPU_POSITION_WARP (EXPERIMENTAL)</UserfriendlyName>
+          <HexValue>0x00000002</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>SOC_EMULATED_CURSOR</UserfriendlyName>
+          <HexValue>0x00000003</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>COMBINED_CURSOR</UserfriendlyName>
+          <HexValue>0x00000004</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>REDRAW_METHOD_MASK</UserfriendlyName>
+          <HexValue>0x000000F0</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>REDRAW_SETPIXEL</UserfriendlyName>
+          <HexValue>0x00000010</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>REDRAW_RENDER_BEFORE_FLIP</UserfriendlyName>
+          <HexValue>0x00000020</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>REDRAW_DESKTOP</UserfriendlyName>
+          <HexValue>0x00000040</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>REPLACE_CURSOR_SHAPE_MASK</UserfriendlyName>
+          <HexValue>0x00000F00</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>REPLACE_OFF (RECOMMENDED)</UserfriendlyName>
+          <HexValue>0x00000000</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>REPLACE_ON</UserfriendlyName>
+          <HexValue>0x00000100</HexValue>
+        </CustomSettingValue>
+      <CustomSettingValue>
+          <UserfriendlyName>CURSOR_INFO_MASK</UserfriendlyName>
+          <HexValue>0x0000F000</HexValue>
+        </CustomSettingValue>
+      <CustomSettingValue>
+          <UserfriendlyName>CURSOR_INFO_HW</UserfriendlyName>
+          <HexValue>0x00001000</HexValue>
+        </CustomSettingValue>
+      <CustomSettingValue>
+          <UserfriendlyName>CURSOR_INFO_HW</UserfriendlyName>
+          <HexValue>0x00002000</HexValue>
+        </CustomSettingValue>
+      <CustomSettingValue>
+          <UserfriendlyName>CURSOR_INFO_HW</UserfriendlyName>
+          <HexValue>0x00004000</HexValue>
+        </CustomSettingValue>
+      </SettingValues>
+      <SettingMasks />
+ </CustomSetting>
+    <CustomSetting>
+      <UserfriendlyName>CONTROLFLOWGUARD</UserfriendlyName>
+      <HexSettingID>0x1053e972</HexSettingID>
+      <MinRequiredDriverVersion>372.00</MinRequiredDriverVersion>
+      <GroupName>0 - [/]</GroupName>
+      <SettingValues>
+        <CustomSettingValue>
+          <UserfriendlyName>Enabled</UserfriendlyName>
+          <HexValue>0x00000001</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>Enabled (RECOMMENDED)</UserfriendlyName>
+          <HexValue>0x00000000</HexValue>
+        </CustomSettingValue>
+      </SettingValues>
+      <SettingMasks />
+   </CustomSetting>     
+      <CustomSetting>
+      <UserfriendlyName>DACACHELINESIZE</UserfriendlyName>
+      <HexSettingID>0x10148135</HexSettingID>
+      <MinRequiredDriverVersion>372.00</MinRequiredDriverVersion>
+      <GroupName>0 - [/]</GroupName>
+      <SettingValues>
+        <CustomSettingValue>
+          <UserfriendlyName>Minimum</UserfriendlyName>
+          <HexValue>0x00000000</HexValue>
+        </CustomSettingValue>
+        <CustomSettingValue>
+          <UserfriendlyName>Dynamic (RECOMMENDED)</UserfriendlyName>
+          <HexValue>0x00000003</HexValue>
         </CustomSettingValue>
       </SettingValues>
       <SettingMasks />
