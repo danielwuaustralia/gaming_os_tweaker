@@ -81,11 +81,14 @@ function Get-KX {
 
 function Check-For-Tool-Viability {
 	$Value = & "$(Get-KX)" /RdMem32 "0x0"
-	if ($Value.Contains('Kernel Driver can not be loaded')) {
+	if ($Value -match 'Kernel Driver can not be loaded') {
 		New-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\CI\Config\" -Name VulnerableDriverBlocklistEnable -PropertyType Dword -Value 0 -Force | Out-Null
-		Write-Host "Kernel Driver can not be loaded. [ErrorCode : 2148204812] A certificate was explicitly revoked by its issuer."
+		[Environment]::NewLine
+		Write-Host "Kernel Driver can not be loaded. A certificate was explicitly revoked by its issuer."
 		Write-Host "In some cases, you might need to disable Microsoft Vulnerable Driver Blocklist for the tool to work."
 		Write-Host "It will be done automatically, but it can also be done through the UI, in the Core Isolation section. If doesnt work immeditelly, it may require a restart."
+		[Environment]::NewLine
+		cmd /c pause
 		exit 0
 	}
 }

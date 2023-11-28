@@ -14,7 +14,6 @@
   - Download CRU at <https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU>
   - Enable Fast Vactive
   - Enable Auto Low Latency Mode
-  - Done
 - (Optional) If you are looking to improve your display calibration
   - Profiles at <https://tftcentral.co.uk/articles/icc_profiles>
   - Alternative tool <https://displaycal.net/>

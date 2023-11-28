@@ -12,6 +12,8 @@
 
   Beware: Audio USB and Keyboard might be on the same parent as Mouse, so the parent being the same, it would lose the core assigned of one to the other. Recommended to plug into a different device controller.
 
+	Warn: Do not add HardDisk as device option, otherwise it might break the system in some way, like boot.
+
   Current Choices:
     - Reset all interrupt affinity related options
     - Enable MSI to everything that supports
@@ -19,14 +21,14 @@
 
   In the pre-choice I optionally disabled MSI in the Mouse (parent), because in some cases it's an option to consider, but not for other devices imho. Since legacy interrupts may have a simple interrupt implementation leading to lower latency, since the MSI does not have instant processing.
   I would say for Mouse is worth considering IRQ/Legacy Interrupt vs MSI-X, but not MSI, since MSI-X is also known to have lower latency, but since it's still MSI, it might also not have instant processing, not that the legacy implementation does.
-  It will be based on what works for you. MSI-X should work very well for Ethernet, even more so if you are able to get RSS Queues working, network.cmd script should be able to help with that. 
+  It will be based on what works for you. MSI-X should work very well for Ethernet, even more so if you are able to get RSS Queues working, network.cmd script should be able to help with that.
 
-  https://electronics.stackexchange.com/a/76878 
+  https://electronics.stackexchange.com/a/76878
 
   I suppose if there were a Polling alternative to MSI, it could be even better, as it could able to process faster than interrupts, leading to lower latency, since MSI are not instant processing, if you check the url above this.
   DevicePriority to High seems to help in lowering latency (even if minor) as it take priority in processing.
   https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmw-tuning-latency-sensitive-workloads-white-paper.pdf - Mid Page 8
-	
+
   ---------------------------
 
   If a device has both MSI and MSI-X, MSI-X will take precedence and hard limit is the size of the vector. Regardless of the value set, it will be capped on that limit, this is based on a documentation.
