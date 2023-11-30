@@ -175,7 +175,7 @@
       <ProfileSetting>
         <SettingNameInfo />
         <SettingID>14366808</SettingID>
-        <SettingValue>32</SettingValue>
+        <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -641,25 +641,6 @@
         <SettingNameInfo>NVIDIA Predefined Sharpen Usage</SettingNameInfo>
         <SettingID>5867849</SettingID>
         <SettingValue>15</SettingValue>
-        <ValueType>Dword</ValueType>
-      </ProfileSetting>
-    </Settings>
-  </Profile>
-  <Profile>
-    <ProfileName>Steam Web Helper Service</ProfileName>
-    <Executeables />
-    <Settings />
-  </Profile>
-  <Profile>
-    <ProfileName>Valve Steam WebHelper</ProfileName>
-    <Executeables>
-      <string>steamwebhelper.exe</string>
-    </Executeables>
-    <Settings>
-      <ProfileSetting>
-        <SettingNameInfo>Enable FXAA</SettingNameInfo>
-        <SettingID>276089202</SettingID>
-        <SettingValue>0</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
     </Settings>
