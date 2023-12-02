@@ -68,7 +68,7 @@ function Download-KX {
 	if ($KXExists.ToolsKXExists -or $KXExists.LocalKXExists) {
 		return
 	}
-	$downloadUrl = "https://github.com/dougg0k/gaming_os_tweaker/raw/main/scripts/tools/KX.exe"
+	$downloadUrl = "https://github.com/lowlatencygaming/gaming_os_tweaker/raw/main/scripts/tools/KX.exe"
 	Write-Host "KX Utility not found, started downloading - $downloadUrl"
 	[Environment]::NewLine
 	Invoke-WebRequest -URI $downloadUrl -OutFile $LocalKX -UseBasicParsing
