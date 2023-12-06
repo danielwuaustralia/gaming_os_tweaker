@@ -3,6 +3,9 @@
 > [!NOTE]  
 > As for my final commit. It's all now completely optimized in every point, no point in wasting more time on tweaks, all that is left is just enjoy gaming sessions, that's obviously the whole point. Any sort of input lag, unresponsiveness and performance problems does not exist anymore. No further commits will be done.
 
+> [!NOTE]
+> Someone just contacted me with suggestions to add into the project, and I said that I am satisfied with the current result, and that I will include a LICENSE in the project, so that if anyone want to continue the work in their own fork, they can without any problems. So, to know that anything done in any fork, would not be made considering my own decisions / choices.
+
 > Attempts to debloat, keep low input lag, low latency, better hitreg and improved performance.
 
 ```txt
