@@ -86,7 +86,7 @@ function Check-For-Tool-Viability {
 		[Environment]::NewLine
 		Write-Host "Kernel Driver can not be loaded. A certificate was explicitly revoked by its issuer."
 		Write-Host "In some cases, you might need to disable Microsoft Vulnerable Driver Blocklist for the tool to work."
-		Write-Host "It will be done automatically, but it can also be done through the UI, in the Core Isolation section. If doesnt work immeditelly, it may require a restart."
+		Write-Host "It will be done automatically, but it can also be done through the UI, in the Core Isolation section. If doesnt work immediatelly, it may require a restart."
 		[Environment]::NewLine
 		cmd /c pause
 		exit 0
@@ -210,11 +210,6 @@ function Get-R32-Hex-From-Address {
 	return Get-Hex-Value-From-Tool-Result -value $Value
 }
 
-function Get-Reg-Value {
-	param ([string] $path, [string] $name)
-	return Get-ItemProperty -Path $path -ErrorAction SilentlyContinue | Select-Object -ExpandProperty $name -ErrorAction SilentlyContinue
-}
-
 function Get-Left-Side-From-MemoryRange {
 	param ([string] $memoryRange)
 	return $memoryRange.Split("-")[0]
@@ -274,7 +269,7 @@ function Disable-IMOD {
 	param ([string] $address, [string] $value)
 	$ValueData = "0x00000000"
 	if (![string]::IsNullOrWhiteSpace($value)) { $ValueData = $value }
-	$Value = & "$(Get-KX)" /WrMem32 $address $valueData
+	$Value = & "$(Get-KX)" /WrMem32 $address $ValueData
 	while ([string]::IsNullOrWhiteSpace($Value)) { Start-Sleep -Seconds 1 }
 	return $Value
 }
